@@ -12,7 +12,17 @@
             
               success:  function(response) {
                 userProfilePlaceholder.innerHTML = userProfileTemplate(response);
+                var availableMinutes = parseFloat(response.availableMinutes);
+                var list =  response.cdr;
+                
+                for(var i=0;i<list.length; i++){
+                  console.log(list[i]);
+                    availableMinutes = availableMinutes-parseFloat(list[i].duration);
+                 
+
+                }
                 console.log(response);
+                available_minutes = availableMinutes;
               }
             });
               

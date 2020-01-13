@@ -6,6 +6,7 @@
         </title>
     </head>
     <body bgcolor="#000000">
+        <div id="content">
         <h2 style="color: #ccc;"> Analyze CDR for client:</h2>
         <div id="user-profile">
         </div>
@@ -28,10 +29,35 @@
             </div>
           </script>
 
-
-
+          
+          <h4  style="color: #1db954;" id="minutes">Remaing minutes </h4>
+        </div>
+        <input type="button" id="bt" onclick="print()" value="Download Raport" />
+        <input type="button"  style="color: #1db954;" id="btn2" onclick="minute()" value="See remaing minutes" />
         <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+        <script>
+            let doc = new jsPDF('p','pt','a4');
+            function print(){
+            doc.addHTML(document.body,function() {
+                doc.save('raport.pdf');
+            });
+
+            
+
+        }
+        var available_minutes;
+
+            function minute(){
+                var minutes = document.getElementById('minutes');
+                minutes.innerText += available_minutes;
+            }
+        </script>
         <script src="script.js"></script>
+        
+        
     </body>
 </html>
