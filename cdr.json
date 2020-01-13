@@ -1,0 +1,87 @@
+{
+    "client":"client1",
+    "clientName": "John Doe",
+    "email": "jd@example.com",
+    "availableMinutes":"200",
+    "cdr": [
+        {
+            "client":"client1",
+            "clientName": "John Doe",
+            "email": "jd@example.com",
+            "availableMinutes":"200",
+            "cdr": [
+              {
+                "id": "1",
+                "phones": {
+                  "phone1": "111111111111",
+                  "phone2": "111111111112"
+                },
+                "duration": "5.24",
+                "callId":"1",
+                "conectedToCell": "cell_23",
+                "latitude": "44.4316275",
+                "longitude": "26.0813361",
+                "registered": "true"
+              },
+              {
+                "id": "2",
+                "phones": {
+                  "phone1": "111111111111",
+                  "phone2": "111111111113"
+                },
+                "duration": "2.23",
+                "callId":"2",
+                "conectedToCell": "cell_56",
+                "latitude": "44.444896",
+                "longitude": "26.099314",
+                "registered": "true"
+              }
+            ]
+        },
+{
+    "client":"client2",
+    "clientName": "John Bon Jovi",
+    "email": "stefan@example.com",
+    "availableMinutes":"250",
+    "cdr": [
+      {
+        "id": "1",
+        "phones": {
+          "phone1": "111111111111",
+          "phone2": "111111111112"
+        },
+        "duration": "51.24",
+        "callId":"1",
+        "conectedToCell": "cell_23",
+        "latitude": "44.4316275",
+        "longitude": "26.0813361",
+        "registered": "true"
+      },
+      {
+        "id": "2",
+        "phones": {
+          "phone1": "111111111111",
+          "phone2": "111111111113"
+        },
+        "duration": "1.23",
+        "callId":"2",
+        "conectedToCell": "cell_56",
+        "latitude": "44.444896",
+        "longitude": "26.099314",
+        "registered": "true"
+      },
+      {
+        "id": "3",
+        "phones": {
+          "phone1": "111111111111",
+          "phone2": "111133111117"
+        },
+        "duration": "2.23",
+        "callId":"3",
+        "conectedToCell": "cell_56",
+        "latitude": "44.444896",
+        "longitude": "26.099314",
+        "registered": "true"
+      }
+    ]
+}

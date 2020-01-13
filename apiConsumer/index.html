@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CDR Viewer
+        </title>
+    </head>
+    <body bgcolor="#000000">
+        <h2 style="color: #ccc;"> Analyze CDR for client:</h2>
+        <div id="user-profile">
+        </div>
+        <input type="text" id="client"/>
+        <button class="btn btn-default" id="get-client" style="background-color: #1db954;">Get client</button>
+        <script id="user-profile-template" type="text/x-handlebars-template">
+            <h1 style="color: #1db954;">Information for: {{client}}</h1>
+            <div class="media">
+              <div class="media-body">
+                <dl class="dl-horizontal">
+                  <dt style="color: #1db954;">Display name</dt><dd class="clearfix" style="color: #ccc;">{{clientName}}</dd>
+                  <dt style="color: #1db954;">Email</dt><dd style="color: #ccc;">{{email}}</dd>
+                  <dt style="color: #1db954;">Minutes available</dt><dd style="color: #ccc;">{{availableMinutes}}</dd>
+                  <dt style="color: #1db954;">Calls and their duration</dt>
+                  <ul></ul>{{#each cdr}}<li style="color: #ccc;">CDR id: {{this.id}}     duration: {{this.duration}}</li>{{/each}}</ul>
+                  <dt style="color: #1db954;">Calls and their locations</dt>
+                  <ul></ul>{{#each cdr}}<a href="https://maps.google.com/?q={{this.latitude}},{{this.longitude}}"><li>Location of call ID {{callId}}</li></a>{{/each}}</ul>
+                </dl>
+              </div>
+            </div>
+          </script>
+
+
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
